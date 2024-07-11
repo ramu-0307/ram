@@ -21,11 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
-// Routes
-app.get('/', (req, res) => {
-  res.render('index', { definition: null });
-});
-
 app.get('/signup', (req, res) => {
   res.render('signup', { error: null });
 });
